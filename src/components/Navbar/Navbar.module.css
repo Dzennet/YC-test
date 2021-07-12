@@ -1,0 +1,38 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100%;
+  min-height: 50px;
+  background-color: lavender;
+}
+
+.nav_search {
+  width: 40%;
+}
+
+.nav_search > input {
+  padding: 5px;
+  outline: none;
+  border: 1px solid #fff;
+  color: #000;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.nav_btn {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #b0b0bb;
+}
+
+.modal_inner_title {
+  font-size: 20px;
+}

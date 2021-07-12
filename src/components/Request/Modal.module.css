@@ -1,0 +1,104 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  animation-name: appear;
+  animation-duration: 300ms;
+}
+
+.modal_inner {
+  background-color: blue;
+  width: 100%;
+  max-width: 550px;
+  background: white;
+  position: relative;
+  margin: 0 20px;
+  max-height: calc(100vh - 40px);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slide-in;
+  animation-duration: 0.5s;
+  padding: 20px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-in {
+  from {
+    transform: translateY(-150px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.modal_close {
+  position: absolute;
+  left: 95%;
+  top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.request_item {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.request_item > input,
+textarea {
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  margin-left: 10px;
+}
+
+.request_item > textarea {
+  resize: vertical;
+  display: block;
+}
+
+.request_item_list {
+  list-style: none;
+}
+
+.request_options > button {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+.request_options > button:nth-child(1) {
+  background-color: rgb(138, 204, 226);
+}
+.request_options > button:nth-child(2) {
+  background-color: lightcoral;
+}
+.request_options > button:nth-child(1):hover {
+  background-color: rgb(119, 197, 223);
+}
+.request_options > button:nth-child(2):hover {
+  background-color: rgb(233, 110, 110);
+}
